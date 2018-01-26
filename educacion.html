@@ -6,31 +6,101 @@
     <title>Hoja de Vida Digital</title>
   </head>
   <header>
-    <svg width="20px" height="20px">
+    <svg id="svgLogo" width="20px" height="20px">
       <img src="images/logo.svg" alt="logo" width="200" height="120">
     </svg>
   </header>
   <body>
-      <h1>Curriculum Vitae</h1>
-          <p><h2> Joseth Vargas Rosales</h2></p>
-          <p><h3> Nacimiento: 09 de junio 1991</h3></p>
-          <p><h3> Lugar de Nacimiento: Coronado</h3></p>
-      <nav>
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="educacion.html"> Educación </a></li>
-          <li><a href="experiencia.html">Experiencia </a></li>
-        </ul>
-      </nav>
-  
+    <h1>Curriculum Vitae</h1>
+        <p><h2 id="nombre"> Joseth Vargas Rosales</h2></p>
+        <p><h3 id="nacimiento"> Nacimiento: 09 de junio 1991</h3></p>
+        <p><h3 id="lugarNacimiento"> Lugar de Nacimiento: Coronado</h3></p>
+    <nav id="menu">
+      <ul id="itemsMenu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="educacion.html"> Educación </a></li>
+        <li><a href="experiencia.html">Experiencia </a></li>
+      </ul>
+    </nav>
+    <h2>Educación</h2>
+    <table id="tablaEducacion"border="1">
+      <thead>
+        <th>Año</th>
+        <th>Institución</th>
+        <th>Lugar</th>
+        <th>¿Culminó</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2003</td>
+          <td>Escuela San Pedro</td>
+          <td>Coronado</td>
+          <td>Sí</td>
+        </tr>
+        <tr>
+          <td>2008</td>
+          <td>Liceo de Coronado</td>
+          <td>Coronado</td>
+          <td>Sí</td>
+        </tr>
+        <tr>
+          <td>2013</td>
+          <td>Universidad de Costa Rica</td>
+          <td>Guanacaste</td>
+          <td>Sí</td>
+        </tr>
+      </tbody>
 
+    </table>
+    <form id="formularioEducacion" class="" name="Agregar Estudios"title="Agregar Estudios" action="index.html" method="post">
+      <fieldset>
+        <legend>Agregar Estudios: </legend>
+        <label for=""><p>Año
+          <select id="selectAnos"class="" name=comboAnos>
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+          </select>
+          </p>
+        </label>
+        <label id="lblInstitucion" for=""><p><strong>Institución: </strong>
+          <input id="txtInstitucio"type="text" name="Institucion" value=""></p>
+        </label>
+        <label id="lblLugas" for=""<p><strong>Lugar: </strong>
+          <textarea id="txtaLugar" name="txtLugar" rows="2" cols="40"></textarea></p>
+        </label>
+        <label id="lblCulmino" for=""><p><strong>¿Culminó? </strong>
+          <input id="rbSi"type="radio" name="si" value="Sí">
+          <label id="lblSi"for="">Sí</label>
+          <input id="rbNo" type="radio" name="no" value="No">
+          <label id="lblNo" for="">No</label>
+        </label>
+        <p><input id="btnEnviar"type="submit" name="btnEnviar" value="Enviar"></p>
+      </fieldset>
+    </form>
   </body>
   <footer>
     <p>Derechos reservados</p>
     <ul>
-      <li>Vazquez de Coronado</li>
-      <li>86167049</li>
-      <li>joseth.cr@gmail.com</li>
+      <li id="footerLugar">Vazquez de Coronado</li>
+      <li id="footerNumero">86167049</li>
+      <li id="footerCorreo">joseth.cr@gmail.com</li>
     </ul>
   </footer>
 </html>
